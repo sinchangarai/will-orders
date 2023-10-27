@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bits.wilp.order.model.Order;
-import com.bits.wilp.order.model.Product;
 import com.bits.wilp.order.service.OrderService;
 import com.bits.wilp.order.util.HttpUtil;
 
