@@ -35,6 +35,7 @@ public class HttpUtil {
             response = restTemplate.exchange(userServiceBaseUrl + "/token-expiry",
                     HttpMethod.GET, requestEntity, String.class);
         } catch(RestClientException ioe) {
+            System.out.println(ioe.getMessage());
             return true;
         }
     
@@ -50,6 +51,7 @@ public class HttpUtil {
         try {
             response = restTemplate.getForEntity(productServiceBaseUrl + "/products/" + productId, Product.class);
         } catch(RestClientException ioe) {
+            System.out.println(ioe.getMessage());
             return null;
         }
         return response.getBody();
@@ -70,6 +72,7 @@ public class HttpUtil {
             if(response.getStatusCode() == HttpStatus.OK)
                 return true;
         } catch(RestClientException ioe) {
+            System.out.println(ioe.getMessage());
             return false;
         }
         return false;
