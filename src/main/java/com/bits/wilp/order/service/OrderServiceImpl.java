@@ -22,7 +22,8 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private OrderRepository orderRepository;
-    HttpUtil httpUtil = new HttpUtil();
+    @Autowired
+    private HttpUtil httpUtil;
 
     @Override
     public Order placeOrder(Order order, HttpServletRequest request) {

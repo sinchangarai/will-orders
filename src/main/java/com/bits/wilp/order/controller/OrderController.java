@@ -22,7 +22,8 @@ public class OrderController {
 
     @Autowired
     private OrderService orderService;
-    private HttpUtil httpUtil = new HttpUtil();
+    @Autowired
+    private HttpUtil httpUtil;
 
 
     @PostMapping("/orders/placeOrder")
